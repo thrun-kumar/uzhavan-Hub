@@ -1,0 +1,1142 @@
+[
+  {
+    "id": "vet-coimbatore-1",
+    "centreName": "Government Veterinary Polyclinic, Coimbatore",
+    "district": "Coimbatore",
+    "location": "Main Road, Coimbatore Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf"
+    ],
+    "service": "General Check-up",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240000",
+    "rating": 4.6,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-coimbatore-2",
+    "centreName": "Coimbatore Taluk Veterinary Hospital",
+    "district": "Coimbatore",
+    "location": "Main Road, Coimbatore Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Calf"
+    ],
+    "service": "Vaccination",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240001",
+    "rating": 4.7,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-coimbatore-3",
+    "centreName": "Sri Krishna Cattle & Dairy Health Centre, Coimbatore",
+    "district": "Coimbatore",
+    "location": "Main Road, Coimbatore Central",
+    "animalsSupported": [
+      "Goat",
+      "Sheep"
+    ],
+    "service": "Emergency",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.8,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-coimbatore-4",
+    "centreName": "Coimbatore Mobile Livestock Emergency Dispensary",
+    "district": "Coimbatore",
+    "location": "Main Road, Coimbatore Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Goat",
+      "Sheep",
+      "Calf"
+    ],
+    "service": "Treatment",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.9,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-tiruppur-1",
+    "centreName": "Government Veterinary Polyclinic, Tiruppur",
+    "district": "Tiruppur",
+    "location": "Main Road, Tiruppur Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Calf"
+    ],
+    "service": "General Check-up",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240100",
+    "rating": 4.6,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-tiruppur-2",
+    "centreName": "Tiruppur Taluk Veterinary Hospital",
+    "district": "Tiruppur",
+    "location": "Main Road, Tiruppur Central",
+    "animalsSupported": [
+      "Goat",
+      "Sheep"
+    ],
+    "service": "Vaccination",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240101",
+    "rating": 4.7,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-tiruppur-3",
+    "centreName": "Sri Krishna Cattle & Dairy Health Centre, Tiruppur",
+    "district": "Tiruppur",
+    "location": "Main Road, Tiruppur Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Goat",
+      "Sheep",
+      "Calf"
+    ],
+    "service": "Emergency",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.8,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-tiruppur-4",
+    "centreName": "Tiruppur Mobile Livestock Emergency Dispensary",
+    "district": "Tiruppur",
+    "location": "Main Road, Tiruppur Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf",
+      "Goat"
+    ],
+    "service": "Treatment",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.9,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-erode-1",
+    "centreName": "Government Veterinary Polyclinic, Erode",
+    "district": "Erode",
+    "location": "Main Road, Erode Central",
+    "animalsSupported": [
+      "Goat",
+      "Sheep"
+    ],
+    "service": "General Check-up",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240200",
+    "rating": 4.6,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-erode-2",
+    "centreName": "Erode Taluk Veterinary Hospital",
+    "district": "Erode",
+    "location": "Main Road, Erode Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Goat",
+      "Sheep",
+      "Calf"
+    ],
+    "service": "Vaccination",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240201",
+    "rating": 4.7,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-erode-3",
+    "centreName": "Sri Krishna Cattle & Dairy Health Centre, Erode",
+    "district": "Erode",
+    "location": "Main Road, Erode Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf",
+      "Goat"
+    ],
+    "service": "Emergency",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.8,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-erode-4",
+    "centreName": "Erode Mobile Livestock Emergency Dispensary",
+    "district": "Erode",
+    "location": "Main Road, Erode Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf"
+    ],
+    "service": "Treatment",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.9,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-salem-1",
+    "centreName": "Government Veterinary Polyclinic, Salem",
+    "district": "Salem",
+    "location": "Main Road, Salem Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Goat",
+      "Sheep",
+      "Calf"
+    ],
+    "service": "General Check-up",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240300",
+    "rating": 4.6,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-salem-2",
+    "centreName": "Salem Taluk Veterinary Hospital",
+    "district": "Salem",
+    "location": "Main Road, Salem Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf",
+      "Goat"
+    ],
+    "service": "Vaccination",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240301",
+    "rating": 4.7,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-salem-3",
+    "centreName": "Sri Krishna Cattle & Dairy Health Centre, Salem",
+    "district": "Salem",
+    "location": "Main Road, Salem Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf"
+    ],
+    "service": "Emergency",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.8,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-salem-4",
+    "centreName": "Salem Mobile Livestock Emergency Dispensary",
+    "district": "Salem",
+    "location": "Main Road, Salem Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Calf"
+    ],
+    "service": "Treatment",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.9,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-namakkal-1",
+    "centreName": "Government Veterinary Polyclinic, Namakkal",
+    "district": "Namakkal",
+    "location": "Main Road, Namakkal Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf",
+      "Goat"
+    ],
+    "service": "General Check-up",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240400",
+    "rating": 4.6,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-namakkal-2",
+    "centreName": "Namakkal Taluk Veterinary Hospital",
+    "district": "Namakkal",
+    "location": "Main Road, Namakkal Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf"
+    ],
+    "service": "Vaccination",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240401",
+    "rating": 4.7,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-namakkal-3",
+    "centreName": "Sri Krishna Cattle & Dairy Health Centre, Namakkal",
+    "district": "Namakkal",
+    "location": "Main Road, Namakkal Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Calf"
+    ],
+    "service": "Emergency",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.8,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-namakkal-4",
+    "centreName": "Namakkal Mobile Livestock Emergency Dispensary",
+    "district": "Namakkal",
+    "location": "Main Road, Namakkal Central",
+    "animalsSupported": [
+      "Goat",
+      "Sheep"
+    ],
+    "service": "Treatment",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.9,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-thanjavur-1",
+    "centreName": "Government Veterinary Polyclinic, Thanjavur",
+    "district": "Thanjavur",
+    "location": "Main Road, Thanjavur Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf"
+    ],
+    "service": "General Check-up",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240500",
+    "rating": 4.6,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-thanjavur-2",
+    "centreName": "Thanjavur Taluk Veterinary Hospital",
+    "district": "Thanjavur",
+    "location": "Main Road, Thanjavur Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Calf"
+    ],
+    "service": "Vaccination",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240501",
+    "rating": 4.7,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-thanjavur-3",
+    "centreName": "Sri Krishna Cattle & Dairy Health Centre, Thanjavur",
+    "district": "Thanjavur",
+    "location": "Main Road, Thanjavur Central",
+    "animalsSupported": [
+      "Goat",
+      "Sheep"
+    ],
+    "service": "Emergency",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.8,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-thanjavur-4",
+    "centreName": "Thanjavur Mobile Livestock Emergency Dispensary",
+    "district": "Thanjavur",
+    "location": "Main Road, Thanjavur Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Goat",
+      "Sheep",
+      "Calf"
+    ],
+    "service": "Treatment",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.9,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-madurai-1",
+    "centreName": "Government Veterinary Polyclinic, Madurai",
+    "district": "Madurai",
+    "location": "Main Road, Madurai Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Calf"
+    ],
+    "service": "General Check-up",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240600",
+    "rating": 4.6,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-madurai-2",
+    "centreName": "Madurai Taluk Veterinary Hospital",
+    "district": "Madurai",
+    "location": "Main Road, Madurai Central",
+    "animalsSupported": [
+      "Goat",
+      "Sheep"
+    ],
+    "service": "Vaccination",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240601",
+    "rating": 4.7,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-madurai-3",
+    "centreName": "Sri Krishna Cattle & Dairy Health Centre, Madurai",
+    "district": "Madurai",
+    "location": "Main Road, Madurai Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Goat",
+      "Sheep",
+      "Calf"
+    ],
+    "service": "Emergency",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.8,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-madurai-4",
+    "centreName": "Madurai Mobile Livestock Emergency Dispensary",
+    "district": "Madurai",
+    "location": "Main Road, Madurai Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf",
+      "Goat"
+    ],
+    "service": "Treatment",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.9,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-dindigul-1",
+    "centreName": "Government Veterinary Polyclinic, Dindigul",
+    "district": "Dindigul",
+    "location": "Main Road, Dindigul Central",
+    "animalsSupported": [
+      "Goat",
+      "Sheep"
+    ],
+    "service": "General Check-up",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240700",
+    "rating": 4.6,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-dindigul-2",
+    "centreName": "Dindigul Taluk Veterinary Hospital",
+    "district": "Dindigul",
+    "location": "Main Road, Dindigul Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Goat",
+      "Sheep",
+      "Calf"
+    ],
+    "service": "Vaccination",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240701",
+    "rating": 4.7,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-dindigul-3",
+    "centreName": "Sri Krishna Cattle & Dairy Health Centre, Dindigul",
+    "district": "Dindigul",
+    "location": "Main Road, Dindigul Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf",
+      "Goat"
+    ],
+    "service": "Emergency",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.8,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-dindigul-4",
+    "centreName": "Dindigul Mobile Livestock Emergency Dispensary",
+    "district": "Dindigul",
+    "location": "Main Road, Dindigul Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf"
+    ],
+    "service": "Treatment",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.9,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-trichy-1",
+    "centreName": "Government Veterinary Polyclinic, Trichy",
+    "district": "Trichy",
+    "location": "Main Road, Trichy Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Goat",
+      "Sheep",
+      "Calf"
+    ],
+    "service": "General Check-up",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240800",
+    "rating": 4.6,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-trichy-2",
+    "centreName": "Trichy Taluk Veterinary Hospital",
+    "district": "Trichy",
+    "location": "Main Road, Trichy Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf",
+      "Goat"
+    ],
+    "service": "Vaccination",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240801",
+    "rating": 4.7,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-trichy-3",
+    "centreName": "Sri Krishna Cattle & Dairy Health Centre, Trichy",
+    "district": "Trichy",
+    "location": "Main Road, Trichy Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf"
+    ],
+    "service": "Emergency",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.8,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-trichy-4",
+    "centreName": "Trichy Mobile Livestock Emergency Dispensary",
+    "district": "Trichy",
+    "location": "Main Road, Trichy Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Calf"
+    ],
+    "service": "Treatment",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.9,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-karur-1",
+    "centreName": "Government Veterinary Polyclinic, Karur",
+    "district": "Karur",
+    "location": "Main Road, Karur Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf",
+      "Goat"
+    ],
+    "service": "General Check-up",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240900",
+    "rating": 4.6,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-karur-2",
+    "centreName": "Karur Taluk Veterinary Hospital",
+    "district": "Karur",
+    "location": "Main Road, Karur Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf"
+    ],
+    "service": "Vaccination",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 240901",
+    "rating": 4.7,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-karur-3",
+    "centreName": "Sri Krishna Cattle & Dairy Health Centre, Karur",
+    "district": "Karur",
+    "location": "Main Road, Karur Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Calf"
+    ],
+    "service": "Emergency",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.8,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-karur-4",
+    "centreName": "Karur Mobile Livestock Emergency Dispensary",
+    "district": "Karur",
+    "location": "Main Road, Karur Central",
+    "animalsSupported": [
+      "Goat",
+      "Sheep"
+    ],
+    "service": "Treatment",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.9,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-dharmapuri-1",
+    "centreName": "Government Veterinary Polyclinic, Dharmapuri",
+    "district": "Dharmapuri",
+    "location": "Main Road, Dharmapuri Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf"
+    ],
+    "service": "General Check-up",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 241000",
+    "rating": 4.6,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-dharmapuri-2",
+    "centreName": "Dharmapuri Taluk Veterinary Hospital",
+    "district": "Dharmapuri",
+    "location": "Main Road, Dharmapuri Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Calf"
+    ],
+    "service": "Vaccination",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 241001",
+    "rating": 4.7,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-dharmapuri-3",
+    "centreName": "Sri Krishna Cattle & Dairy Health Centre, Dharmapuri",
+    "district": "Dharmapuri",
+    "location": "Main Road, Dharmapuri Central",
+    "animalsSupported": [
+      "Goat",
+      "Sheep"
+    ],
+    "service": "Emergency",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.8,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-dharmapuri-4",
+    "centreName": "Dharmapuri Mobile Livestock Emergency Dispensary",
+    "district": "Dharmapuri",
+    "location": "Main Road, Dharmapuri Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Goat",
+      "Sheep",
+      "Calf"
+    ],
+    "service": "Treatment",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.9,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-krishnagiri-1",
+    "centreName": "Government Veterinary Polyclinic, Krishnagiri",
+    "district": "Krishnagiri",
+    "location": "Main Road, Krishnagiri Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Calf"
+    ],
+    "service": "General Check-up",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 241100",
+    "rating": 4.6,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-krishnagiri-2",
+    "centreName": "Krishnagiri Taluk Veterinary Hospital",
+    "district": "Krishnagiri",
+    "location": "Main Road, Krishnagiri Central",
+    "animalsSupported": [
+      "Goat",
+      "Sheep"
+    ],
+    "service": "Vaccination",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 241101",
+    "rating": 4.7,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-krishnagiri-3",
+    "centreName": "Sri Krishna Cattle & Dairy Health Centre, Krishnagiri",
+    "district": "Krishnagiri",
+    "location": "Main Road, Krishnagiri Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Goat",
+      "Sheep",
+      "Calf"
+    ],
+    "service": "Emergency",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.8,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-krishnagiri-4",
+    "centreName": "Krishnagiri Mobile Livestock Emergency Dispensary",
+    "district": "Krishnagiri",
+    "location": "Main Road, Krishnagiri Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf",
+      "Goat"
+    ],
+    "service": "Treatment",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.9,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-villupuram-1",
+    "centreName": "Government Veterinary Polyclinic, Villupuram",
+    "district": "Villupuram",
+    "location": "Main Road, Villupuram Central",
+    "animalsSupported": [
+      "Goat",
+      "Sheep"
+    ],
+    "service": "General Check-up",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 241200",
+    "rating": 4.6,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-villupuram-2",
+    "centreName": "Villupuram Taluk Veterinary Hospital",
+    "district": "Villupuram",
+    "location": "Main Road, Villupuram Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Goat",
+      "Sheep",
+      "Calf"
+    ],
+    "service": "Vaccination",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 241201",
+    "rating": 4.7,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-villupuram-3",
+    "centreName": "Sri Krishna Cattle & Dairy Health Centre, Villupuram",
+    "district": "Villupuram",
+    "location": "Main Road, Villupuram Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf",
+      "Goat"
+    ],
+    "service": "Emergency",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.8,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-villupuram-4",
+    "centreName": "Villupuram Mobile Livestock Emergency Dispensary",
+    "district": "Villupuram",
+    "location": "Main Road, Villupuram Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf"
+    ],
+    "service": "Treatment",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.9,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-cuddalore-1",
+    "centreName": "Government Veterinary Polyclinic, Cuddalore",
+    "district": "Cuddalore",
+    "location": "Main Road, Cuddalore Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Goat",
+      "Sheep",
+      "Calf"
+    ],
+    "service": "General Check-up",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 241300",
+    "rating": 4.6,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-cuddalore-2",
+    "centreName": "Cuddalore Taluk Veterinary Hospital",
+    "district": "Cuddalore",
+    "location": "Main Road, Cuddalore Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf",
+      "Goat"
+    ],
+    "service": "Vaccination",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 241301",
+    "rating": 4.7,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-cuddalore-3",
+    "centreName": "Sri Krishna Cattle & Dairy Health Centre, Cuddalore",
+    "district": "Cuddalore",
+    "location": "Main Road, Cuddalore Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf"
+    ],
+    "service": "Emergency",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.8,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-cuddalore-4",
+    "centreName": "Cuddalore Mobile Livestock Emergency Dispensary",
+    "district": "Cuddalore",
+    "location": "Main Road, Cuddalore Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Calf"
+    ],
+    "service": "Treatment",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.9,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-tirunelveli-1",
+    "centreName": "Government Veterinary Polyclinic, Tirunelveli",
+    "district": "Tirunelveli",
+    "location": "Main Road, Tirunelveli Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf",
+      "Goat"
+    ],
+    "service": "General Check-up",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 241400",
+    "rating": 4.6,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-tirunelveli-2",
+    "centreName": "Tirunelveli Taluk Veterinary Hospital",
+    "district": "Tirunelveli",
+    "location": "Main Road, Tirunelveli Central",
+    "animalsSupported": [
+      "Cow",
+      "Calf"
+    ],
+    "service": "Vaccination",
+    "workingHours": "8:00 AM - 5:30 PM",
+    "emergencyAvailability": "Available during OPD hours",
+    "isEmergency": false,
+    "contact": "+91 422 241401",
+    "rating": 4.7,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-tirunelveli-3",
+    "centreName": "Sri Krishna Cattle & Dairy Health Centre, Tirunelveli",
+    "district": "Tirunelveli",
+    "location": "Main Road, Tirunelveli Central",
+    "animalsSupported": [
+      "Cow",
+      "Buffalo",
+      "Calf"
+    ],
+    "service": "Emergency",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.8,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  },
+  {
+    "id": "vet-tirunelveli-4",
+    "centreName": "Tirunelveli Mobile Livestock Emergency Dispensary",
+    "district": "Tirunelveli",
+    "location": "Main Road, Tirunelveli Central",
+    "animalsSupported": [
+      "Goat",
+      "Sheep"
+    ],
+    "service": "Treatment",
+    "workingHours": "24/7 Round the Clock",
+    "emergencyAvailability": "24/7 On-Call & Mobile Ambulance",
+    "isEmergency": true,
+    "contact": "1962 (Toll-Free Livestock Emergency)",
+    "rating": 4.9,
+    "dataStatus": "Demo location – verify before deployment",
+    "disclaimer": "Prototype information – Verify with the local veterinary department. Do not rely on automated diagnosis."
+  }
+]

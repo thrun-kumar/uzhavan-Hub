@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uzhavan Hub – Your Digital Farming Companion</title>
+  
+  <!-- Google Fonts: Inter & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              500: '#22c55e',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+              950: '#052e16',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- PWA & Mobile Meta Tags -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+  <link rel="apple-touch-icon" href="assets/icon.svg" />
+  <meta name="theme-color" content="#166534" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+  <!-- Custom Style Sheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-[#f8faf7] text-[#0f2d11] min-h-screen flex flex-col antialiased selection:bg-emerald-200">
+
+  <!-- TOP NAVIGATION HEADER -->
+  <header id="mainHeader" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-emerald-100 shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Brand & Mobile Menu Toggle -->
+      <div class="flex items-center gap-3">
+        <button onclick="window.UzhavanApp.toggleMobileMenu()" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-emerald-50 border border-slate-200" title="Toggle Navigation">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+
+        <div onclick="window.UzhavanApp.navigate('dashboard')" class="flex items-center gap-2.5 cursor-pointer group">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-emerald-800 to-green-600 flex items-center justify-center text-white shadow-md text-xl group-hover:scale-105 transition-transform">
+            🌾
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="brand-title font-black text-xl tracking-tight text-emerald-950 group-hover:text-emerald-800 transition-colors">Uzhavan Hub</span>
+              <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 tracking-wider">AI</span>
+            </div>
+            <span class="text-[10px] font-semibold text-slate-700 block -mt-0.5 tracking-wide">உழவன் ஹப் • Your Digital Farming Companion</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center / Right Controls -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Mobile Test & Share Button -->
+        <button onclick="window.UzhavanApp.openShareModal()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-800 hover:bg-emerald-900 text-white shadow-sm text-xs font-bold transition-all" title="Mobile Test, QR Code, and Public Access">
+          <span>📱</span>
+          <span class="hidden sm:inline">Mobile Test & Share</span>
+          <span class="sm:hidden">Share</span>
+        </button>
+
+        <!-- System Architecture Modal Button -->
+        <button onclick="window.UzhavanApp.openArchitectureModal()" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-200 text-xs font-bold transition-all" title="View Block Diagram Architecture">
+          <span>🧬</span>
+          <span>Core Architecture</span>
+        </button>
+
+        <!-- Active Farmer Context Badge -->
+        <div onclick="window.UzhavanApp.navigate('profile')" class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-300 cursor-pointer transition-all" title="Click to edit farmer profile">
+          <div class="w-6 h-6 rounded-full bg-emerald-700 text-white flex items-center justify-center text-xs font-bold">
+            👨‍🌾
+          </div>
+          <div class="text-left text-xs">
+            <span id="headerFarmerName" class="font-bold text-slate-800 block truncate max-w-[130px]">Murugan (Madurai)</span>
+          </div>
+        </div>
+
+        <!-- Language Selector (English / தமிழ்) -->
+        <div class="flex items-center gap-1 bg-white border border-slate-200 p-1 rounded-xl shadow-xs">
+          <span class="text-xs px-1.5">🌐</span>
+          <select id="langToggle" onchange="window.UzhavanApp.setLanguage(this.value)" class="text-xs font-bold text-slate-800 bg-transparent focus:outline-none cursor-pointer pr-1">
+            <option value="en">English</option>
+            <option value="ta">தமிழ் (Tamil)</option>
+          </select>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN APP CONTAINER -->
+  <div class="flex-1 flex max-w-7xl w-full mx-auto px-2 sm:px-4 pt-4 gap-6">
+    
+    <!-- LEFT SIDEBAR NAVIGATION (DESKTOP / COLLAPSIBLE MOBILE) -->
+    <aside id="mainSidebar" class="hidden lg:block w-64 flex-shrink-0">
+      <div class="sticky top-20 bg-white rounded-2xl p-4 border border-emerald-100 shadow-sm space-y-4">
+        
+        <!-- Sidebar Brand Banner -->
+        <div class="p-3 bg-gradient-to-r from-emerald-900 to-green-900 text-white rounded-xl text-center space-y-1">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-300 block">SMART PLATFORM</span>
+          <p class="text-[11px] text-emerald-100/80 font-medium">Empowering farmers with AI</p>
+        </div>
+
+        <!-- Navigation Links List as per Section 17 -->
+        <nav>
+          <ul id="sidebarNavList" class="space-y-1">
+            <!-- Dynamically populated in app.js -->
+          </ul>
+        </nav>
+
+        <!-- Profile Quick Link Footer -->
+        <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-700 font-semibold px-2">
+          <span>v2.4 Active</span>
+          <button onclick="window.UzhavanApp.navigate('landing')" class="text-emerald-700 hover:underline">Change Profile</button>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- MAIN VIEW CONTAINER -->
+    <main id="viewContainer" class="flex-1 min-w-0">
+      <!-- Dynamically rendered components populate here -->
+    </main>
+
+  </div>
+
+  <!-- MOBILE BOTTOM NAVIGATION (Section 17) -->
+  <nav id="mobileBottomNav" class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-emerald-100 shadow-xl grid grid-cols-5 py-1 px-2">
+    <!-- Dynamically populated in app.js -->
+  </nav>
+
+  <!-- ARCHITECTURE & BLOCK DIAGRAM MODAL (Section 19 & 22) -->
+  <div id="architectureModal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 shadow-2xl border border-emerald-200 space-y-6">
+      
+      <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+        <div>
+          <span class="text-xs font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
+            System Logic & Architecture
+          </span>
+          <h2 class="text-2xl font-black text-emerald-950 mt-1">
+            Uzhavan Hub – AI Decision Engine Architecture
+          </h2>
+        </div>
+        <button onclick="window.UzhavanApp.closeArchitectureModal()" class="text-slate-700 hover:text-slate-900 p-2 rounded-xl hover:bg-slate-100 text-lg font-bold">
+          ✕
+        </button>
+      </div>
+
+      <!-- Section 9: New Uzhavan Hub Value Proposition & 5 Core Pillars -->
+      <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 text-xs md:text-sm text-emerald-950 leading-relaxed font-medium">
+        <strong class="font-bold text-emerald-900 block mb-1">💡 The All-in-One Digital Farming Ecosystem</strong>
+        Uzhavan Hub is an AI-powered all-in-one digital farming platform that helps farmers make better farming decisions and easily access agricultural services, resources, workers, machinery, and livestock healthcare.
+      </div>
+
+      <!-- 5 Major Service Pillars Grid as specified in Section 9 -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+          <strong class="text-emerald-900 block font-bold text-sm">1. 🌱 FARM DECISION</strong>
+          <p class="text-slate-700">AI crop recommendation, agro-weather advisories, soil health, fertilizer scheduling, crop health scanner, and net profit predictions.</p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+          <strong class="text-emerald-900 block font-bold text-sm">2. 🛠️ FARM SERVICES</strong>
+          <p class="text-slate-700">Farm worker booking (planting, harvesting, weeding) and machinery rental (tractors, combine harvesters, rotavators, sprayers).</p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+          <strong class="text-emerald-900 block font-bold text-sm">3. 🐄 LIVESTOCK CARE</strong>
+          <p class="text-slate-700">Nearby veterinary hospitals, doctors, cattle health guides (cow, buffalo, goat, sheep, poultry), and 24/7 emergency assistance (1962).</p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-1">
+          <strong class="text-emerald-900 block font-bold text-sm">4. 💰 FARM FINANCE</strong>
+          <p class="text-slate-700">Wholesale mandi spot prices with "Sell or Wait?" trend insights, PM-KISAN & solar pump schemes, and 4% KCC crop credit.</p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-1 sm:col-span-2">
+          <strong class="text-emerald-900 block font-bold text-sm">5. 🎙️ FARMER ASSISTANCE</strong>
+          <p class="text-slate-700">Bilingual "Uzhavan AI" voice assistant supporting spoken Tamil (தமிழ்) and English Speech-to-Text and audio synthesis grounded in the farmer's actual profile.</p>
+        </div>
+      </div>
+
+      <!-- Visual Architecture Block Diagram -->
+      <div class="bg-slate-900 text-white p-6 rounded-xl font-mono text-xs md:text-sm leading-relaxed overflow-x-auto shadow-inner">
+        <pre class="text-emerald-400 font-bold">
+Farmer Profile (Location, Soil, Acreage, Budget)
+      ↓
+┌───────────────────────────────────────────────┐
+│         🤖 AI FARMING DECISION ENGINE          │
+└───────────────────────────────────────────────┘
+      ↓
+┌───────────────┬────────────────┬──────────────┐
+│  Soil Data    │  Weather Data  │  Market Data │
+│ (NPK, Texture)│ (Forecast,Rain)│ (Mandi Price)│
+└───────────────┴────────────────┴──────────────┘
+      ↓
+Personalized Synthesis & Service Routing
+      ↓
+┌───────────────┬────────────────┬──────────────┐
+│ 1. DECISION   │ 2. SERVICES    │ 3. LIVESTOCK │
+│ Crop/Profit   │ Workers/Tractor│ Vet Care/Cows│
+├───────────────┼────────────────┼──────────────┤
+│ 4. FINANCE    │ 5. ASSISTANCE  │ 6. CALENDAR  │
+│ Mandi/Schemes │ Uzhavan Voice  │ Weekly Action│
+└───────────────┴────────────────┴──────────────┘
+      ↓
+Farmer (Better Decisions, Lower Costs, High Yield)
+        </pre>
+      </div>
+
+      <div class="text-right pt-2 border-t border-slate-100">
+        <button onclick="window.UzhavanApp.closeArchitectureModal()" class="px-6 py-2.5 rounded-xl bg-emerald-800 hover:bg-emerald-900 text-white text-xs font-bold shadow-md">
+          Close Architecture View
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MOBILE SHARE & PUBLIC TESTING MODAL -->
+  <div id="shareModal" class="hidden fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-xl w-full p-6 md:p-8 space-y-6 shadow-2xl border border-emerald-100 max-h-[92vh] overflow-y-auto">
+      
+      <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-2xl">
+            📱
+          </div>
+          <div>
+            <h3 class="text-lg font-black text-slate-900">Mobile Testing & Public Access</h3>
+            <p class="text-xs text-slate-500 font-medium">Test on your smartphone, share with farmers, or deploy publicly</p>
+          </div>
+        </div>
+        <button onclick="window.UzhavanApp.closeShareModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-sm">
+          ✕
+        </button>
+      </div>
+
+      <!-- Live Wi-Fi Mobile Testing Box -->
+      <div class="bg-gradient-to-br from-emerald-50 to-green-50 p-5 rounded-2xl border border-emerald-200/80 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-extrabold text-emerald-800 uppercase tracking-wide flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Option 1: Instant Mobile Wi-Fi Test
+          </span>
+          <span class="text-[10px] bg-emerald-200/60 text-emerald-900 px-2 py-0.5 rounded-full font-bold">Zero Setup Needed</span>
+        </div>
+        
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Open this link on any mobile phone or tablet connected to your home/hotspot Wi-Fi:
+        </p>
+
+        <!-- URL Display & Copy -->
+        <div class="flex items-center gap-2 bg-white p-2.5 rounded-xl border border-emerald-300 shadow-xs">
+          <input id="mobileShareUrl" type="text" readonly value="http://192.168.29.117:8000" class="flex-1 text-xs font-mono font-bold text-emerald-900 bg-transparent focus:outline-none select-all" />
+          <button onclick="window.UzhavanApp.copyShareUrl()" class="px-3 py-1.5 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold transition-all shadow-xs flex items-center gap-1">
+            <span>📋</span>
+            <span>Copy Link</span>
+          </button>
+        </div>
+
+        <!-- QR Code -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 bg-white/80 p-4 rounded-xl border border-emerald-100">
+          <img id="qrCodeImg" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=http://192.168.29.117:8000" alt="Scan to open Uzhavan Hub on mobile" class="w-32 h-32 rounded-lg border border-slate-200 p-1 bg-white shadow-xs" onerror="this.style.display='none'" />
+          <div class="space-y-1.5 text-center sm:text-left">
+            <div class="text-xs font-bold text-slate-800">📷 Scan with Phone Camera</div>
+            <p class="text-[11px] text-slate-500 leading-normal">
+              Point your iPhone camera or Android QR scanner at this code to immediately launch the app on your phone.
+            </p>
+            <div class="text-[10px] text-emerald-700 font-semibold pt-1">
+              ✓ Fast mobile layout & touch gestures ready
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PWA Installation Box -->
+      <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+        <div class="flex items-center justify-between">
+          <h4 class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+            <span>📲</span> Install as Mobile App (PWA)
+          </h4>
+          <button id="pwaInstallBtn" onclick="window.UzhavanApp.triggerPwaInstall()" class="hidden px-2.5 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-bold shadow-xs">
+            Install App Now
+          </button>
+        </div>
+        <p class="text-[11px] text-slate-600 leading-relaxed">
+          On Chrome (Android): Tap <span class="font-semibold text-slate-800">⋮ (Menu) → "Install app"</span> or <span class="font-semibold text-slate-800">"Add to Home Screen"</span>.<br/>
+          On Safari (iOS): Tap <span class="font-semibold text-slate-800">Share Icon → "Add to Home Screen"</span>.<br/>
+          Uzhavan Hub installs as a native mobile application with offline cache support.
+        </p>
+      </div>
+
+      <!-- Public Internet Access / Deployment Guidance -->
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold text-slate-800 uppercase tracking-wide">
+          🌐 Option 2: Share Over the Internet (Worldwide Access)
+        </h4>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+          <!-- Cloudflare Tunnel / Ngrok -->
+          <div class="p-3 rounded-xl border border-slate-200 hover:border-emerald-300 bg-white space-y-1">
+            <div class="font-bold text-slate-800 flex items-center gap-1">
+              <span>⚡</span> Instant Live Tunnel
+            </div>
+            <p class="text-[11px] text-slate-500">Run in terminal for a 100% free instant live link:</p>
+            <code class="block text-[10px] font-mono bg-slate-100 p-1.5 rounded text-emerald-900 overflow-x-auto">
+              npx localtunnel --port 8000
+            </code>
+          </div>
+
+          <!-- GitHub Pages -->
+          <div class="p-3 rounded-xl border border-slate-200 hover:border-emerald-300 bg-white space-y-1">
+            <div class="font-bold text-slate-800 flex items-center gap-1">
+              <span>🐙</span> GitHub Pages (Permanent)
+            </div>
+            <p class="text-[11px] text-slate-500">Push to GitHub and enable Pages in Settings.</p>
+            <code class="block text-[10px] font-mono bg-slate-100 p-1.5 rounded text-emerald-900 overflow-x-auto">
+              git push origin main
+            </code>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-right pt-2 border-t border-slate-100 flex justify-end gap-3">
+        <button onclick="window.UzhavanApp.closeShareModal()" class="px-5 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-bold">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toastNotification" class="hidden">
+    <span id="toastIcon" class="text-xl">✅</span>
+    <span id="toastText" class="text-xs md:text-sm font-bold">Action Completed</span>
+  </div>
+
+  <!-- JAVASCRIPT DEPENDENCY PIPELINE -->
+  <script src="js/data.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/components/landing.js"></script>
+  <script src="js/components/dashboard.js"></script>
+  <script src="js/components/decisionEngine.js"></script>
+  <script src="js/components/plantWizard.js"></script>
+  <script src="js/components/farmServices.js"></script>
+  <script src="js/components/farmLabour.js"></script>
+  <script src="js/components/machineryRental.js"></script>
+  <script src="js/components/veterinaryCare.js"></script>
+  <script src="js/components/weather.js"></script>
+  <script src="js/components/cropRisk.js"></script>
+  <script src="js/components/profitPredictor.js"></script>
+  <script src="js/components/farmFinance.js"></script>
+  <script src="js/components/marketPrice.js"></script>
+  <script src="js/components/actionPlan.js"></script>
+  <script src="js/components/fertilizer.js"></script>
+  <script src="js/components/cropHealth.js"></script>
+  <script src="js/components/schemes.js"></script>
+  <script src="js/components/loans.js"></script>
+  <script src="js/components/community.js"></script>
+  <script src="js/components/farmManagement.js"></script>
+  <script src="js/components/farmLingo.js"></script>
+  <script src="js/components/voiceAssistant.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

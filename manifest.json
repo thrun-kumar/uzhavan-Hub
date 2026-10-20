@@ -1,0 +1,21 @@
+{
+  "name": "Uzhavan Hub – Your Digital Farming Companion",
+  "short_name": "Uzhavan Hub",
+  "description": "AI-Powered Smart Agriculture and Decision Platform for Farmers",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f8faf7",
+  "theme_color": "#166534",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["agriculture", "business", "utilities"],
+  "lang": "en",
+  "dir": "ltr"
+}
