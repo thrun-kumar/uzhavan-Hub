@@ -6,8 +6,25 @@ const ActionPlanComponent = {
 
   render(container) {
     const isTa = window.UzhavanApp.currentLang === 'ta';
-    const crops = window.UZHAVAN_DATA.CROPS_DATA;
-    const crop = crops.find(c => c.id === this.selectedCropId) || crops[0];
+    const crops = window.UZHAVAN_DATA.CROPS_DATA || [];
+    const crop = crops.find(c => c.id === this.selectedCropId) || crops[0] || {
+      id: "groundnut",
+      name: "Groundnut",
+      nameTa: "நிலக்கடலை",
+      icon: "🥜",
+      durationDays: 105
+    };
+
+    const defaultWeeklyPlan = [
+      { week: 1, titleEn: "Soil Preparation & Basal Manure", titleTa: "நிலம் தயாரித்தல் & இயற்கை உரம்", phase: "Preparation", icon: "🚜", descEn: `Deep ploughing followed by incorporating 5 tons FYM/acre for ${crop.name}.`, descTa: `${crop.nameTa || crop.name} பயிருக்கான கோடை உழவு மற்றும் ஏக்கருக்கு 5 டன் மக்கிய தொழுவுரம் இடுதல்.` },
+      { week: 2, titleEn: "Seed Treatment & Sowing", titleTa: "விதை நேர்த்தி & விதைப்பு", phase: "Sowing", icon: "🌱", descEn: "Treat certified seeds with bio-inoculant Trichoderma viride and sow at proper spacing.", descTa: "சான்றளிக்கப்பட்ட விதைகளை ட்ரைக்கோடெர்மா கொண்டு விதை நேர்த்தி செய்து விதைக்கவும்." },
+      { week: 4, titleEn: "First Irrigation & Weeding", titleTa: "முதல் பாசனம் & களையெடுத்தல்", phase: "Vegetative", icon: "💧", descEn: "Carry out hand weeding; regulate irrigation moisture.", descTa: "கைக்களை எடுத்தல் மற்றும் பாசன ஈரப்பதத்தை சீராக்குதல்." },
+      { week: 6, titleEn: "Top Dressing & Nutrient Spray", titleTa: "மேலுரம் & நுண்ணூட்ட தெளிப்பு", phase: "Nutrient", icon: "🧪", descEn: "Apply secondary nitrogen and potassium fertilizers calibrated for crop stage.", descTa: "பயிரின் வளர்ச்சி நிலைக்கு ஏற்ப இரண்டாம் கட்ட உரமிடுதல்." },
+      { week: 9, titleEn: "Pest & Disease Scouting", titleTa: "பூச்சி & நோய் கண்காணிப்பு", phase: "Protection", icon: "🐛", descEn: "Scout underside of leaves for pests; spray neem extract as preventive.", descTa: "பூச்சி தாக்குதல் குறித்து இலைகளை ஆய்வு செய்து இயற்கை பூச்சி விரட்டி தெளித்தல்." },
+      { week: 12, titleEn: "Maturity Check & Harvesting", titleTa: "அறுவடை & களம் சேகரிப்பு", phase: "Harvest", icon: "🌾", descEn: "Assess field maturity indicators; conduct harvest and transport to threshing yard.", descTa: "முதிர்ச்சி அறிகுறிகளை உறுதி செய்து அறுவடை செய்தல்." }
+    ];
+
+    const weeklyPlan = (Array.isArray(crop.weeklyPlan) && crop.weeklyPlan.length) ? crop.weeklyPlan : defaultWeeklyPlan;
 
     container.innerHTML = `
       <div class="space-y-6 max-w-7xl mx-auto pb-10">
@@ -44,7 +61,7 @@ const ActionPlanComponent = {
               <span class="text-3xl">${crop.icon}</span>
               <div>
                 <h2 class="text-lg font-bold text-emerald-950">${crop.name} (${crop.nameTa}) Cultivation Plan</h2>
-                <span class="text-xs text-slate-700">${crop.durationDays} Days Lifecycle • ${crop.weeklyPlan.length} Key Milestones</span>
+                <span class="text-xs text-slate-700">${crop.durationDays} Days Lifecycle • ${weeklyPlan.length} Key Milestones</span>
               </div>
             </div>
 
@@ -56,7 +73,7 @@ const ActionPlanComponent = {
 
           <!-- WEEKLY ACTIVITIES LIST -->
           <div class="relative pl-6 md:pl-10 space-y-6 before:content-[''] before:absolute before:left-3 md:before:left-5 before:top-3 before:bottom-3 before:w-0.5 before:bg-emerald-200">
-            ${crop.weeklyPlan.map((act) => {
+            ${weeklyPlan.map((act) => {
               const isDone = this.completedTasks.has(act.week);
               return `
                 <div class="relative flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 rounded-xl border transition-all ${isDone ? 'bg-emerald-50/50 border-emerald-300' : 'bg-white border-slate-200 hover:border-slate-300 shadow-sm'}">
@@ -77,7 +94,7 @@ const ActionPlanComponent = {
                       ${isTa ? act.titleTa : act.titleEn}
                     </h3>
                     <p class="text-xs text-slate-700 max-w-2xl leading-relaxed">
-                      ${act.descEn}
+                      ${isTa && act.descTa ? act.descTa : act.descEn}
                     </p>
                   </div>
 

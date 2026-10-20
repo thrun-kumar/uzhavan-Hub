@@ -3,12 +3,12 @@
 const DashboardComponent = {
   render(container) {
     const isTa = window.UzhavanApp.currentLang === 'ta';
-    const profile = window.UzhavanApp.userProfile;
-    const weather = window.UZHAVAN_DATA.WEATHER_MOCK;
-    const market = window.UZHAVAN_DATA.MARKET_PRICES;
-    const workers = window.UZHAVAN_DATA.FARM_WORKERS_DATA;
-    const machines = window.UZHAVAN_DATA.MACHINERY_DATA;
-    const facilities = window.UZHAVAN_DATA.VETERINARY_FACILITIES_DATA;
+    const profile = window.UzhavanApp.userProfile || {};
+    const weather = (window.UZHAVAN_DATA && window.UZHAVAN_DATA.WEATHER_MOCK) || {};
+    const market = (window.UZHAVAN_DATA && window.UZHAVAN_DATA.MARKET_PRICES) || [];
+    const workers = (window.UZHAVAN_DATA && window.UZHAVAN_DATA.FARM_WORKERS_DATA) || [];
+    const machines = (window.UZHAVAN_DATA && window.UZHAVAN_DATA.MACHINERY_DATA) || [];
+    const facilities = (window.UZHAVAN_DATA && window.UZHAVAN_DATA.VETERINARY_FACILITIES_DATA) || [];
 
     // Quick initial analysis for top preview
     const topAnalysis = window.UzhavanDecisionEngine.analyzeFarm({

@@ -81,7 +81,12 @@ const PlantWizardComponent = {
               ${isTa ? "1. உங்கள் பண்ணை எந்த மாவட்டத்தில் அமைந்துள்ளது?" : "1. Where is your farm located?"}
             </h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
-              ${["Madurai District", "Thanjavur District", "Coimbatore District", "Salem District", "Tiruchirappalli District", "Dindigul District", "Tirunelveli District", "Erode District", "Vellore District"].map(loc => `
+              ${[
+                "Madurai District", "Thanjavur District", "Coimbatore District", "Salem District", 
+                "Tiruppur District", "Erode District", "Trichy District", "Dindigul District", 
+                "Namakkal District", "Karur District", "Dharmapuri District", "Krishnagiri District",
+                "Villupuram District", "Cuddalore District", "Tirunelveli District"
+              ].map(loc => `
                 <div onclick="window.PlantWizardComponent.setAnswer('location', '${loc}')" class="p-3.5 rounded-xl border cursor-pointer text-center text-xs font-bold transition-all ${this.answers.location === loc ? 'border-emerald-700 bg-emerald-50 text-emerald-900 ring-2 ring-emerald-600/30' : 'border-slate-200 hover:border-slate-300 text-slate-700'}">
                   📍 ${loc}
                 </div>

@@ -115,7 +115,9 @@ class UzhavanApp {
       if (header) header.classList.remove('hidden');
     }
 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof window.scrollTo === 'function') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
     // Component Registry with defensive lookups to prevent 'Cannot read properties of undefined (reading render)'
     const componentMap = {
@@ -402,21 +404,23 @@ class UzhavanApp {
   }
 
   setupListeners() {
-    // Global ESC key to close modals
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        this.closeArchitectureModal();
-        this.closeShareModal();
-      }
-    });
+    if (typeof window.addEventListener === 'function') {
+      // Global ESC key to close modals
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          this.closeArchitectureModal();
+          this.closeShareModal();
+        }
+      });
 
-    // PWA install prompt event handler
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      this.deferredPrompt = e;
-      const pwaBtn = document.getElementById('pwaInstallBtn');
-      if (pwaBtn) pwaBtn.classList.remove('hidden');
-    });
+      // PWA install prompt event handler
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        this.deferredPrompt = e;
+        const pwaBtn = document.getElementById('pwaInstallBtn');
+        if (pwaBtn) pwaBtn.classList.remove('hidden');
+      });
+    }
   }
 }
 

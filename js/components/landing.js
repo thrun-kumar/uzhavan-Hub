@@ -140,7 +140,12 @@ const ProfileComponent = {
                 ${isTa ? "இருப்பிடம் / மாவட்டம்" : "Location / District"} *
               </label>
               <select name="location" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-600 text-sm font-medium bg-white">
-                ${["Madurai District", "Thanjavur District", "Coimbatore District", "Salem District", "Tiruchirappalli District", "Dindigul District", "Tirunelveli District", "Erode District", "Vellore District", "Theni District"].map(d => `
+                ${[
+                  "Madurai District", "Thanjavur District", "Coimbatore District", "Salem District", 
+                  "Tiruppur District", "Erode District", "Trichy District", "Dindigul District", 
+                  "Namakkal District", "Karur District", "Dharmapuri District", "Krishnagiri District",
+                  "Villupuram District", "Cuddalore District", "Tirunelveli District", "Theni District", "Vellore District"
+                ].map(d => `
                   <option value="${d}" ${profile.location === d ? 'selected' : ''}>${d}</option>
                 `).join('')}
               </select>
