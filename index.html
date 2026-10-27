@@ -86,6 +86,12 @@
           <span>Core Architecture</span>
         </button>
 
+        <!-- Register / Sign In Header Quick Nav -->
+        <button onclick="window.UzhavanApp.navigate('registration')" class="hidden sm:flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-800 hover:bg-emerald-900 text-white text-xs font-bold shadow-xs transition-all" title="Register New Farmland Plot">
+          <span>🌱</span>
+          <span>Register Farm</span>
+        </button>
+
         <!-- Active Farmer Context Badge -->
         <div onclick="window.UzhavanApp.navigate('profile')" class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-emerald-300 cursor-pointer transition-all" title="Click to edit farmer profile">
           <div class="w-6 h-6 rounded-full bg-emerald-700 text-white flex items-center justify-center text-xs font-bold">
@@ -363,6 +369,9 @@ Farmer (Better Decisions, Lower Costs, High Yield)
   <!-- JAVASCRIPT DEPENDENCY PIPELINE -->
   <script src="js/data.js"></script>
   <script src="js/engine.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/components/registration.js"></script>
+  <script src="js/components/login.js"></script>
   <script src="js/components/landing.js"></script>
   <script src="js/components/dashboard.js"></script>
   <script src="js/components/decisionEngine.js"></script>

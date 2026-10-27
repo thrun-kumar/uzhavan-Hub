@@ -101,6 +101,26 @@ const DecisionEngineComponent = {
                 </button>
               </div>
 
+              <!-- CONNECTED REGISTERED LAND PLOTS SELECTOR (SECTION 6 REQUIREMENT) -->
+              ${(window.UzhavanAuth && window.UzhavanAuth.user && window.UzhavanAuth.user.plots && window.UzhavanAuth.user.plots.length > 0) ? `
+                <div class="mb-4 p-3 rounded-xl bg-emerald-50/80 border border-emerald-200 space-y-1.5">
+                  <div class="flex items-center justify-between">
+                    <label class="text-[11px] font-black uppercase tracking-wider text-emerald-900 flex items-center gap-1">
+                      <span>🌾</span> <span>Selected Farmland Plot:</span>
+                    </label>
+                    <span class="text-[10px] text-emerald-700 font-bold">Auto-Calibrated</span>
+                  </div>
+                  <select id="engineSelectedPlot" onchange="window.DecisionEngineComponent.loadPlot(this.value)"
+                          class="w-full px-3 py-2 rounded-xl border border-emerald-300 bg-white text-xs font-black text-emerald-950 focus:ring-2 focus:ring-emerald-500">
+                    ${window.UzhavanAuth.user.plots.map(p => `
+                      <option value="${p.id}" ${window.UzhavanAuth.activePlotId === p.id ? 'selected' : ''}>
+                        🌾 ${p.plot_name} (${p.area} ${p.area_unit} • ${p.soil_type})
+                      </option>
+                    `).join('')}
+                  </select>
+                </div>
+              ` : ''}
+
               <form id="engineForm" onsubmit="window.DecisionEngineComponent.handleAnalyze(event)" class="space-y-4">
                 <!-- Crop Filter / Selection -->
                 <div>
@@ -527,6 +547,48 @@ const DecisionEngineComponent = {
       this.render(document.getElementById('viewContainer'));
       window.UzhavanApp.showToast("Farm analyzed with real-time agro data! 🌾", "success");
     }, 400);
+  },
+
+  loadPlot(plotId) {
+    if (!window.UzhavanAuth || !window.UzhavanAuth.user || !window.UzhavanAuth.user.plots) return;
+    const plot = window.UzhavanAuth.user.plots.find(p => p.id === parseInt(plotId));
+    if (!plot) return;
+
+    window.UzhavanAuth.setActivePlot(plot.id);
+
+    // Auto-populate form
+    const locElem = document.getElementById('engineLocation');
+    if (locElem) {
+      const matchOpt = Array.from(locElem.options).find(o => o.value.toLowerCase().includes((plot.district || 'madurai').toLowerCase()));
+      if (matchOpt) locElem.value = matchOpt.value;
+    }
+
+    const areaElem = document.getElementById('engineLandArea');
+    if (areaElem) {
+      areaElem.value = plot.area_acres || 3.0;
+      const lbl = document.getElementById('landAreaVal');
+      if (lbl) lbl.innerText = `${plot.area_acres || 3.0} Acres (${plot.area} ${plot.area_unit})`;
+    }
+
+    const soilElem = document.getElementById('engineSoilType');
+    if (soilElem) {
+      const matchSoil = Array.from(soilElem.options).find(o => o.value.toLowerCase().includes((plot.soil_type || '').toLowerCase()));
+      if (matchSoil) soilElem.value = matchSoil.value;
+    }
+
+    const waterElem = document.getElementById('engineWater');
+    if (waterElem) {
+      const matchWater = Array.from(waterElem.options).find(o => o.value.toLowerCase().includes((plot.irrigation_source || '').toLowerCase()));
+      if (matchWater) waterElem.value = matchWater.value;
+    }
+
+    const budgetElem = document.getElementById('engineBudget');
+    if (budgetElem) {
+      budgetElem.value = plot.farming_budget || 50000;
+    }
+
+    window.UzhavanApp.showToast(`Calibrated AI Engine to "${plot.plot_name}"! 🌾`, 'success');
+    this.handleAnalyze();
   },
 
   resetToProfile() {

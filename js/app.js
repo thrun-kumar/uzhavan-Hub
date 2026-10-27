@@ -28,6 +28,15 @@ class UzhavanApp {
       }
     }
 
+    // Initialize Persistent Authentication & Plot Layer
+    if (window.UzhavanAuth && typeof window.UzhavanAuth.init === 'function') {
+      try {
+        await window.UzhavanAuth.init();
+      } catch (err) {
+        console.warn("[UzhavanApp] Auth init note:", err);
+      }
+    }
+
     this.renderNavigation();
     this.navigate(this.currentView);
     this.setupListeners();
@@ -104,12 +113,14 @@ class UzhavanApp {
     const container = document.getElementById('viewContainer');
     if (!container) return;
 
-    // Hide/show sidebar for landing page
+    // Hide/show sidebar for full-width views
     const sidebar = document.getElementById('mainSidebar');
     const header = document.getElementById('mainHeader');
-    if (viewName === 'landing') {
+    const fullWidthViews = ['landing', 'login', 'registration'];
+    if (fullWidthViews.includes(viewName)) {
       if (sidebar) sidebar.classList.add('hidden');
-      if (header) header.classList.add('hidden');
+      if (viewName === 'landing' && header) header.classList.add('hidden');
+      else if (header) header.classList.remove('hidden');
     } else {
       if (sidebar) sidebar.classList.remove('hidden');
       if (header) header.classList.remove('hidden');
@@ -122,6 +133,8 @@ class UzhavanApp {
     // Component Registry with defensive lookups to prevent 'Cannot read properties of undefined (reading render)'
     const componentMap = {
       landing: window.LandingComponent,
+      registration: window.RegistrationComponent,
+      login: window.LoginComponent,
       dashboard: window.DashboardComponent,
       decisionEngine: window.DecisionEngineComponent,
       plantWizard: window.PlantWizardComponent,
@@ -143,7 +156,7 @@ class UzhavanApp {
       farmManagement: window.FarmManagementComponent || window.ProfileComponent,
       farmLingo: window.FarmLingoComponent,
       voiceAssistant: window.VoiceAssistantComponent,
-      profile: window.FarmManagementComponent || window.ProfileComponent
+      profile: window.ProfileComponent || window.FarmManagementComponent
     };
 
     const targetComponent = componentMap[viewName] || window.DashboardComponent;
@@ -191,11 +204,18 @@ class UzhavanApp {
     // Update Header
     const farmerBadge = document.getElementById('headerFarmerName');
     if (farmerBadge) {
-      const loc = (profile.location || 'Madurai').split(' ')[0];
-      farmerBadge.innerText = (isTa ? (profile.nameTa || profile.name) : profile.name) + ` (${loc})`;
+      if (window.UzhavanAuth && window.UzhavanAuth.user) {
+        const u = window.UzhavanAuth.user;
+        const name = u.profile?.full_name || 'Farmer';
+        const dist = u.profile?.district || 'Madurai';
+        farmerBadge.innerText = `${name} (${dist})`;
+      } else {
+        const loc = (profile.location || 'Madurai').split(' ')[0];
+        farmerBadge.innerText = (isTa ? (profile.nameTa || profile.name) : profile.name) + ` (${loc})`;
+      }
     }
 
-    // Complete Navigation list incorporating all 10 core modules + FarmLingo innovation
+    // Complete Navigation list incorporating all 10 core modules + FarmLingo innovation + Auth
     const navItems = [
       { id: 'dashboard', icon: '🏠', labelEn: 'Dashboard', labelTa: 'முகப்பு' },
       { id: 'decisionEngine', icon: '🤖', labelEn: 'AI Decision Engine', labelTa: 'AI முடிவு எஞ்சின்', badge: 'Core' },
@@ -215,7 +235,9 @@ class UzhavanApp {
       { id: 'farmManagement', icon: '📋', labelEn: 'Farm Management', labelTa: 'பண்ணை மேலாண்மை' },
       { id: 'actionPlan', icon: '📅', labelEn: 'Farming Plan', labelTa: 'விவசாய காலண்டர்' },
       { id: 'voiceAssistant', icon: '🎙️', labelEn: 'Uzhavan AI (Voice)', labelTa: 'உழவன் AI (குரல்)' },
-      { id: 'profile', icon: '👤', labelEn: 'Farmer Profile', labelTa: 'சுயவிவரம்' }
+      { id: 'profile', icon: '👤', labelEn: 'Farmer Profile', labelTa: 'சுயவிவரம்' },
+      { id: 'registration', icon: '🌱', labelEn: 'Register Farmland', labelTa: 'புதிய பண்ணை பதிவு' },
+      { id: 'login', icon: '🔑', labelEn: 'Farmer Sign In', labelTa: 'உழவர் உள்நுழைவு' }
     ];
 
     const navContainer = document.getElementById('sidebarNavList');
